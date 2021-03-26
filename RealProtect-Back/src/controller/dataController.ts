@@ -34,7 +34,7 @@ export class dataController {
 
         try {
             const rl = createInterface({
-            input: createReadStream('teste.log'),
+            input: createReadStream('auth.log'),
            });
 
             rl.on('line', (line:any) => {
