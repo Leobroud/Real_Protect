@@ -6,15 +6,15 @@ export class dataBase {
 
   public async getList(input:getList){
 
-    const { sequence, number} = input
+    const { month, limit} = input
 
     const data = "db"
       
     try {
         const result = await knex.raw(`
         select * from ${data} 
-        order by month ${sequence}
-        limit ${number};
+        where month like "%${month}%"
+        limit ${limit};
         `)
 
         return result

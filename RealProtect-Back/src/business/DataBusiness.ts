@@ -14,13 +14,13 @@ export class DataBusiness {
   
   public async getList(input:getList){
         
-    const { sequence, number } = input
+    const { month, limit } = input
     
-    if(!sequence || !number){
+    if(!month || !limit){
         throw new Error("Missing inputs")
     }
-    if(sequence !== "asc" && sequence !== "desc"){
-        throw new Error("input order is asc or desc")
+    if(month !== "Nov" && month !== "Dec"){
+        throw new Error("input nov or dec")
     }
     try {
         const result = await this.database.getList(input)

@@ -9,8 +9,8 @@ export interface insertData{
 }
 
 export interface getList{
-  sequence: string,
-  number: number,
+  month: string,
+  limit: number,
 
 }
 
